@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CheckWin : MonoBehaviour {
 
@@ -13,7 +14,7 @@ public class CheckWin : MonoBehaviour {
 	void Update () {
 		//finds object named player and then finds script attached to it called AddPoints, then pull out score"
 	gameScore = GameObject.FindWithTag("player").GetComponent<AddPoints>().score;
-		Debug.Log ("Game Score: " + gameScore);
+		//Debug.Log ("Game Score: " + gameScore);
 
 		if (gameScore > 10) {
 			Debug.Log ("WINNER!");
@@ -22,5 +23,9 @@ public class CheckWin : MonoBehaviour {
 			Debug.Log ("LOSER!");
 		}
 		timerText.text = "Time: " + Time.fixedTime.ToString ();
+
+		if ( > 30) {
+			ScenceManager.LoadScene (1);
 }
+	}
 }
