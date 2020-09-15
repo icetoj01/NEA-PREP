@@ -10,7 +10,7 @@ public class AddPoints : MonoBehaviour {
 	public TextMeshPro scoreText;
 	public TextMeshPro goodText;
 	private GameObject[] collect5ptArray;
-	private int count5pt;
+	public int count5pt;
 	public TextMeshPro badText;
 	private GameObject[] collect10ptArray;
 	private int count10pt;
