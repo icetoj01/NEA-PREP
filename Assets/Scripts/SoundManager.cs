@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
 
-	public AudioClip coin;
-	private AudioSource source;
+public AudioClip coin;
+private AudioSource source;
 
 	//this will run when the object is first loaded 
-	void Awake (){
+	void Awake () {
 		source = GetComponent<AudioSource> ();
 	}
 	
