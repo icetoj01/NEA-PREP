@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 
 public class AddPoints : MonoBehaviour {
 
@@ -37,9 +37,12 @@ public class AddPoints : MonoBehaviour {
 			scoreText.text = "Score: " + score.ToString ();
 			count5pt -= 1;
 			goodText.text = "Good: " + count5pt.ToString ();
+		}
+			else if (col.gameObject.tag == "boss") {
+			SceneManager.LoadScene (2); }
+	
 		}	 
-
-	}
+			
 
 	void Start (){
 		score = 0;

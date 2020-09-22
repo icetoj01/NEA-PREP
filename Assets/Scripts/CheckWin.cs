@@ -9,7 +9,8 @@ public class CheckWin : MonoBehaviour {
 	private int gameScore;
 		
 	public TextMeshPro timerText;
-	//public float myTimer;
+
+	float timeLeft = 30.0f;
 
 	void Update () {
 		//finds object named player and then finds script attached to it called AddPoints, then pull out score"
@@ -23,7 +24,11 @@ public class CheckWin : MonoBehaviour {
 			Debug.Log ("LOSER!");
 		}
 		timerText.text = "Time: " + Time.fixedTime.ToString ();
-		if (timerText = 30) {
+		//if (timerText > 30) {
+		//	SceneManager.LoadScene (1);
+		//}
+	     timeLeft -= Time.deltaTime;
+		if (timeLeft <= 0) {
 			SceneManager.LoadScene (1);
 		}
 }
